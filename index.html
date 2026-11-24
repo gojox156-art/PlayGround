@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#07131c" />
+  <title>ASTRA: Echoes of Aether</title>
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game" class="game-shell">
+    <canvas id="world" aria-label="Aetherfall game world"></canvas>
+    <div class="world-vignette"></div>
+    <header class="topbar">
+      <button class="brand-mark" data-panel="profile" aria-label="Open profile"><span class="brand-glyph">✦</span><span>ASTRA<small> ECHOES OF AETHER</small></span></button>
+      <div class="top-center"><span class="region-tag"><i></i> LUMENWILD · FRONTIER</span><span class="weather">☼ &nbsp; CLEAR SKIES <b>16:42</b></span></div>
+      <nav class="top-actions"><button class="icon-btn" data-panel="map" aria-label="World map">⌖</button><button class="icon-btn" data-panel="settings" aria-label="Settings">⚙</button><button class="profile-chip" data-panel="profile"><span class="avatar-mini">✦</span><span>WAYFARER<small>RANK 08</small></span><b>⌄</b></button></nav>
+    </header>
+    <section class="quest-card"><div class="quest-kicker"><span class="quest-dot"></span> MAIN STORY <span class="quest-count">01 / 06</span></div><h2>The Shattered Oath</h2><p>Find the source of the resonance</p><div class="quest-progress"><span></span></div><div class="quest-location"><span>⌖</span> Whispering Glade <b>›</b></div></section>
+    <div class="world-toast" id="toast">A strange resonance stirs nearby…</div>
+    <section class="boss-banner" id="bossBanner"><div class="boss-title"><span>✦</span><div><small>ANCIENT SENTINEL</small><strong>Vesper, the Hollow</strong></div><em>LV. 12</em></div><div class="boss-health"><i id="bossHealth"></i></div><div class="boss-stagger"><span>STANCE</span><i id="bossStance"></i></div></section>
+    <aside class="party-panel" id="partyPanel"></aside>
+    <div class="combat-feed" id="combatFeed"><span>✧ &nbsp;Aether resonance detected</span></div>
+    <div class="controls-hint" id="controlsHint"><kbd>WASD</kbd> MOVE <kbd>SPACE</kbd> JUMP <kbd>J</kbd> ATTACK <kbd>Q</kbd> DODGE <kbd>1–4</kbd> SWITCH</div>
+    <div class="touch-controls">
+      <div class="stick-zone" id="stickZone"><div class="stick-ring"><div id="stickKnob"></div></div><span>MOVE</span></div>
+      <div class="touch-right">
+        <button class="touch-btn grapple" data-action="grapple"><span>↗</span><small>GRAPPLE</small></button>
+        <button class="touch-btn jump" data-action="jump"><span>↑</span><small>JUMP</small></button>
+        <button class="touch-btn dash" data-action="dodge"><span>»</span><small>DODGE</small></button>
+        <button class="touch-btn attack" data-action="attack"><span>⚔</span><small>ATTACK</small></button>
+        <button class="touch-btn skill" data-action="skill"><span>◇</span><small>SKILL</small></button>
+        <button class="touch-btn burst" data-action="burst"><span>✦</span><small>BURST</small></button>
+      </div>
+    </div>
+    <footer class="bottom-hud"><button class="hud-link" data-panel="quests"><span>☷</span> QUESTS</button><button class="hud-link" data-panel="inventory"><span>◈</span> INVENTORY</button><div class="xp-wrap"><span>WAYFARER LV. 08</span><i><b></b></i></div><div class="currency"><span>✧</span> 12,480 <b>＋</b></div><button class="menu-button" data-panel="menu">☰</button></footer>
+    <div class="interaction-prompt" id="interactionPrompt"><span>F</span> INVESTIGATE THE RIFT</div>
+    <div id="modalRoot"></div>
+    <section class="title-screen" id="titleScreen"><div class="title-orbit orbit-a"></div><div class="title-orbit orbit-b"></div><div class="title-content"><div class="title-emblem">✦</div><div class="title-overline">A JOURNEY BEYOND THE VEIL</div><h1>ASTRA</h1><div class="title-sub">ECHOES OF AETHER</div><p>A world remembers what the stars have forgotten.</p><button id="beginBtn" class="primary-button">BEGIN YOUR JOURNEY <span>→</span></button><div class="title-note">VERTICAL SLICE &nbsp;·&nbsp; LUMENWILD REGION</div></div><div class="title-footer"><span>© 2025 ASTRAL ARCHIVE</span><span>TOUCH OR KEYBOARD · LANDSCAPE RECOMMENDED</span></div></section>
+    <div class="orientation-hint">⟳ &nbsp; Rotate your device to landscape for the best experience</div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
