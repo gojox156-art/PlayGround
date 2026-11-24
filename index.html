@@ -27,16 +27,22 @@
     <div class="combat-feed" id="combatFeed"><span>✧ &nbsp;Aether resonance detected</span></div>
     <div class="controls-hint" id="controlsHint"><kbd>WASD</kbd> MOVE <kbd>SPACE</kbd> JUMP <kbd>J</kbd> ATTACK <kbd>Q</kbd> DODGE <kbd>1–4</kbd> SWITCH</div>
     <div class="touch-controls">
-      <div class="stick-zone" id="stickZone"><div class="stick-ring"><div id="stickKnob"></div></div><span>MOVE</span></div>
+      <div class="stick-zone" id="stickZone" data-control-id="move" aria-label="Movement joystick"><div class="stick-ring"><div id="stickKnob"></div></div><span>MOVE</span></div>
       <div class="touch-right">
-        <button class="touch-btn grapple" data-action="grapple"><span>↗</span><small>GRAPPLE</small></button>
-        <button class="touch-btn jump" data-action="jump"><span>↑</span><small>JUMP</small></button>
-        <button class="touch-btn dash" data-action="dodge"><span>»</span><small>DODGE</small></button>
-        <button class="touch-btn attack" data-action="attack"><span>⚔</span><small>ATTACK</small></button>
-        <button class="touch-btn skill" data-action="skill"><span>◇</span><small>SKILL</small></button>
-        <button class="touch-btn burst" data-action="burst"><span>✦</span><small>BURST</small></button>
+        <button class="touch-btn grapple" data-action="grapple" data-control-id="grapple" aria-label="Grapple"><span>↗</span><small>GRAPPLE</small></button>
+        <button class="touch-btn jump" data-action="jump" data-control-id="jump" aria-label="Jump"><span>↑</span><small>JUMP</small></button>
+        <button class="touch-btn dash" data-action="dodge" data-control-id="dodge" aria-label="Dodge"><span>»</span><small>DODGE</small></button>
+        <button class="touch-btn attack" data-action="attack" data-control-id="attack" aria-label="Attack"><span>⚔</span><small>ATTACK</small></button>
+        <button class="touch-btn skill" data-action="skill" data-control-id="skill" aria-label="Elemental skill"><span>◇</span><small>SKILL</small></button>
+        <button class="touch-btn burst" data-action="burst" data-control-id="burst" aria-label="Elemental burst"><span>✦</span><small>BURST</small></button>
       </div>
     </div>
+    <section class="control-editor" id="controlEditor" aria-label="Touch control layout editor" aria-hidden="true">
+      <div><strong>TOUCH LAYOUT</strong><span>Drag controls to reposition them</span></div>
+      <button type="button" data-editor-action="reset">RESET</button>
+      <button type="button" class="editor-save" data-editor-action="save">SAVE LAYOUT</button>
+      <button type="button" data-editor-action="cancel">CANCEL</button>
+    </section>
     <footer class="bottom-hud"><button class="hud-link" data-panel="quests"><span>☷</span> QUESTS</button><button class="hud-link" data-panel="inventory"><span>◈</span> INVENTORY</button><div class="xp-wrap"><span>WAYFARER LV. 08</span><i><b></b></i></div><div class="currency"><span>✧</span> 12,480 <b>＋</b></div><button class="menu-button" data-panel="menu">☰</button></footer>
     <div class="interaction-prompt" id="interactionPrompt"><span>F</span> INVESTIGATE THE RIFT</div>
     <div id="modalRoot"></div>
